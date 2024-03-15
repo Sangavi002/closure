@@ -110,3 +110,8 @@ function appendFoodData(food) {
         container2.append(card);
     });
 }
+
+function handleMenuClick(tagId) {
+    document.getElementById('main-menu').style.display = 'none';
+    document.getElementById(tagId).style.display = 'block';
+}

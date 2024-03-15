@@ -26,14 +26,59 @@
         .card > p {
             margin-top: 10px;
         }
+
+        .main-menus {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin-top: 20vh;
+        }
+
+        .main-menu-card {
+            padding: 90px 40px;
+            font-size: 20px;
+            margin: 10px;
+            font-weight: 500;
+            color: white;
+            border-radius: 12px;
+        }
+
+        .main-menu-card:hover {
+            cursor: pointer;
+        }
+
+        .movie-menu {
+            background-color: #4158D0;
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+        }
+
+        .meal-menu {
+            background-color: #D9AFD9;
+            background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+        }
     </style>
 </head>
 <body>
-    <input type="text" id="search" placeholder="Search movie">
-    <input type="text" id="searchFood" placeholder="Search food">
-    <div id="container">
+    <div id="main-menu">
+        <div class="main-menus">
+            <div class="main-menu-card movie-menu" onclick="handleMenuClick('movie-div')">
+                Click here to browse movies and series!
+            </div>
+            <div class="main-menu-card meal-menu" onclick="handleMenuClick('food-div')">
+                Click here to browse tasty meal recipes!
+            </div>
+        </div>
     </div>
-    <div id="container2">
+    <div id="movie-div" style="display: none;">
+        <input type="text" id="search" placeholder="Search movie">
+        <div id="container">
+        </div>
+    </div>
+    <div id="food-div" style="display: none;">
+        <input type="text" id="searchFood" placeholder="Search food">
+        <div id="container2">
+        </div>
     </div>
 </body>
 </html>
